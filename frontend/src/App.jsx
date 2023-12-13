@@ -1,25 +1,27 @@
 import Home from "./Pages/Home.jsx";
-import Achivements from "./Pages/Achivements.jsx";
-import Contact from "./Pages/Contact.jsx";
-import Services from "./Pages/Services.jsx";
+import Products from "./Pages/Products.jsx";
+import Product from "./Pages/Product.jsx";
+import Layout from "./Design/Layout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/services",
-    element: <Services />,
-  },
-  {
-    path: "/achivements",
-    element: <Achivements />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/Homepage",
+        element: <Home />,
+      },
+      {
+        path: "/products/:id",
+        element: <Products />,
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+    ],
   },
 ]);
 
