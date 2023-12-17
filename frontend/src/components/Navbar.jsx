@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="flex flex-row gap-2 justify-center items-center">
         <div className={classNames(" text-sm w-20 flex justify-center items-center px-1 py-3", { "bg-gradient-to-t from-slate-200 to-white border-b-4 border-b-black": linkClicked === "Homepage", "border-b-none": linkClicked !== "Homepage" })}>
           <Link
-            to="/"
+            to="/Homepage"
             onClick={() => {
               setLinkClicked("Homepage");
             }}>

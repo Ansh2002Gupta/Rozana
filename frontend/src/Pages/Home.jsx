@@ -1,5 +1,13 @@
+import Products from "../components/Products";
+import Slider from "../components/Slider";
+
 const Home = () => {
-  return <div>Hi! I am home.</div>;
+  return (
+    <div>
+      <Slider />
+      <Products />
+    </div>
+  );
 };
 
 export default Home;
